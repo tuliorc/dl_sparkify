@@ -2,8 +2,6 @@
 
 This project summarises efforts to extract raw songplay data and log data from a S3 bucket, to transform those and ingest them back to S3 as a set of analytical tables: 1 fact table (songplays) and 4 dimension tables (songs, artists, users, and datetime). 
 
-# ETL schema
-
 # Files
 
 ### etl.py
