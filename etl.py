@@ -28,7 +28,7 @@ def process_song_data(spark, input_data, output_data):
     in the form of two dimension tables: songs (which is partitioned by year and artist_id) and artists.
     """
     # set filepath to folder containing all song data files
-    song_data = input_data + "song-data/A/A/A/*.json"
+    song_data = input_data + "song-data/*/*/*/*.json"
     
     # read song data file
     print("Loading songs data from " + input_data + " ...")
@@ -93,7 +93,7 @@ def process_log_data(spark, input_data, output_data):
     print("Writing complete!")
 
     # read songs data from S3 once again
-    song_data = input_data + "song-data/A/A/A/*.json"
+    song_data = input_data + "song-data/*/*/*/*.json"
     print("Loading songs data from " + input_data + " ...")
     songs_df = spark.read.json(song_data)
     
